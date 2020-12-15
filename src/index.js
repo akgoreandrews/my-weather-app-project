@@ -1,24 +1,38 @@
-      let currentTime = new Date();
-      let date = currentTime.getDate();
-      let hours = currentTime.getHours();
-      if (hours <10){
-         hours= `0${hours}`;  
-      }
-      let minutes = currentTime.getMinutes();
-      if (minutes <10){
-         minutes= `0${minutes}`;  
-      }
-      let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-      let day = days[currentTime.getDay()]; 
-      let week =document.querySelector("#day-of-week");
-      week.innerHTML=`${day}`;
-      let time =document.querySelector("#hours-minute");
-      time.innerHTML=`${hours}:${minutes}`;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${formatHours(timestamp)}`;
+}
+
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`;
+}
 
 
 
       // SEARCH ENGINE
       function displayWeatherCondition(response) {
+       
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -29,6 +43,7 @@
   );
   document.querySelector("#daily-description").innerHTML =
     response.data.weather[0].main;
+  document.querySelector("#date").innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function searchCity(city) {
@@ -76,11 +91,3 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("London");
-
-
-
-
-
-  
-
-
