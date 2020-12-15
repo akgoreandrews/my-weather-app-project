@@ -1,0 +1,55 @@
+body {
+  font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+}
+h1 {
+  color: #1fbca5;
+  text-align: center;
+  padding: 15px 20px;
+  margin: 60px 0 0;
+}
+h2 {
+  text-align: center;
+  font-size: 37px;
+  color: #1fbca5;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  padding: 0;
+}
+.temperature {
+  font: 60px;
+}
+.today {
+  font-size: 15px;
+}
+.prediction {
+  text-align: left;
+  font-size: 15px;
+}
+
+.card {
+  border: 1px solid #7c52ef;
+  border-radius: 40px;
+}
+.button {
+  border-radius: 4px;
+  color: #7c52ef;
+  border: 1px solid #7c52ef;
+}
+.search-button {
+  color: #1fbca5;
+  border-radius: 4px;
+  border: 1px solid #7c52ef;
+}
+.current-location-button {
+  color: #1fbca5;
+  border-radius: 4px;
+  border: 1px solid #7c52ef;
+}
+.weather-emojis {
+  color: #1fbca5;
+}
