@@ -6,6 +6,9 @@ h1 {
   text-align: center;
   padding: 15px 20px;
   margin: 60px 0 0;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
 }
 h2 {
   text-align: center;
@@ -34,6 +37,9 @@ li {
 .card {
   border: 1px solid #7c52ef;
   border-radius: 40px;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
 }
 .button {
   border-radius: 4px;
@@ -52,4 +58,38 @@ li {
 }
 .weather-emojis {
   color: #1fbca5;
+}
+.signature {
+  font-size: 37px;
+}
+.weather-app {
+  border: 1px solid #7c52ef;
+  border-radius: 40px;
+  background: white;
+
+  padding: 20px;
+}
+.weather-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.weather-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+.weather-temperature strong {
+  color: #7c52ef;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+.current-weather {
+  border: 1px solid #7c52ef;
+  border-radius: 40px;
 }
