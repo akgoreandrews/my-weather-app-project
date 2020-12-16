@@ -88,6 +88,16 @@ li:first-letter {
   border-radius: 4px;
   border: 1px solid #7c52ef;
 }
-.weather-emojis {
+.weather-forecast h3 {
   color: #1fbca5;
+  font-size: 15px;
+  text-align: center;
+}
+.weather-forecast-temperature {
+  color: #1fbca5;
+  text-align: center;
+}
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
 }
