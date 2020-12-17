@@ -98,6 +98,7 @@ li:first-letter {
   text-align: center;
 }
 .weather-forecast img {
+  width:100%;
   display: block;
   margin: 0 auto;
 }
